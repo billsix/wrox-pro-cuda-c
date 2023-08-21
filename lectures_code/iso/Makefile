@@ -39,45 +39,45 @@ ${BINDIR}/iso2d_openacc_kernels: ${SRCDIR}/iso2d_kernels.c ${BINDIR}/libcommon_c
 	pgc++ ${CFLAGS} -acc -Minfo=accel ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 
 ${BINDIR}/iso3d_cuda_cuda-aware-mpi2: ${SRCDIR}/iso3d_cuda-aware-mpi2.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso3d_cuda_cuda-aware-mpi: ${SRCDIR}/iso3d_cuda-aware-mpi.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso3d_cuda_mpi2: ${SRCDIR}/iso3d_mpi2.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso3d_cuda_mpi: ${SRCDIR}/iso3d_mpi.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso3d_cuda_peer: ${SRCDIR}/iso3d_peer.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
 
 ${BINDIR}/iso2d_cuda_peer: ${SRCDIR}/iso2d_peer.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_multigpu: ${SRCDIR}/iso2d_multigpu.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_unsafe: ${SRCDIR}/iso2d_unsafe.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_atomic: ${SRCDIR}/iso2d_atomic.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_coop: ${SRCDIR}/iso2d_coop.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_constant: ${SRCDIR}/iso2d_constant.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_shared: ${SRCDIR}/iso2d_shared.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_global: ${SRCDIR}/iso2d_global.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -DPADDING -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -DPADDING -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_unified: ${SRCDIR}/iso2d_unified.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_uva: ${SRCDIR}/iso2d_uva.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_zerocopy: ${SRCDIR}/iso2d_zerocopy.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso2d_cuda_pinned: ${SRCDIR}/iso2d_pinned.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 
 ${BINDIR}/iso2d_cuda: ${SRCDIR}/iso2d.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@
 ${BINDIR}/iso3d_cuda: ${SRCDIR}/iso3d.cu ${BINDIR}/libcommon_cuda.so
-	nvcc ${CFLAGS} -arch=sm_20 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
+	nvcc ${CFLAGS} -arch=sm_75 ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
 
 ${BINDIR}/iso2d_omp: ${SRCDIR}/iso2d.c ${BINDIR}/libcommon_cuda.so
 	g++ ${CFLAGS} ${SRCDIR}/common.cpp ${SRCDIR}/common2d.cpp -lcommon_cuda $< -o $@ -fopenmp
@@ -90,7 +90,7 @@ ${BINDIR}/iso3d: ${SRCDIR}/iso3d.c ${BINDIR}/libcommon_cuda.so
 	g++ ${CFLAGS} ${SRCDIR}/common.cpp ${SRCDIR}/common3d.cpp -lcommon_cuda $< -o $@
 
 ${BINDIR}/libcommon_cuda.so: ${SRCDIR}/common_cuda.cu
-	nvcc ${CFLAGS} -arch=sm_20 -shared -Xcompiler -fPIC $< -o $@
+	nvcc ${CFLAGS} -arch=sm_75 -shared -Xcompiler -fPIC $< -o $@
 
 clean:
 	rm -f ${BINDIR}/*
